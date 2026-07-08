@@ -34,10 +34,13 @@ mysql -u tu_usuario -p
 Crea la base de datos usada por el proyecto:
 
 ```sql
+-- Esquema para el Staging / Datos crudos
+CREATE DATABASE IF NOT EXISTS tarea3_raw;
+
+-- Esquema para el Data Warehouse (Modelos en Estrella)
 CREATE DATABASE IF NOT EXISTS tarea3;
 USE tarea3;
 ```
-
 Luego sal de MySQL:
 
 ```sql
@@ -55,7 +58,7 @@ DB_USER=tu_usuario
 DB_PASSWORD=tu_password
 DB_HOST=localhost
 DB_PORT=3306
-DB_NAME=tarea3
+DB_NAME=tarea3_raw
 CSV_PATH=/Users/yoko/Dev/analasis-COVID19/Covid_Data.csv
 ```
 
@@ -66,7 +69,7 @@ DB_USER=tu_usuario
 DB_PASSWORD=tu_password
 DB_HOST=localhost
 DB_PORT=3306
-DB_NAME=tarea3
+DB_NAME=tarea3_raw
 CSV_PATH=C:\ruta\a\tu\proyecto\Covid_Data.csv
 ```
 
